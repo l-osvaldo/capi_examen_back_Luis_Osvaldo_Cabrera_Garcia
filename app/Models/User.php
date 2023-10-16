@@ -42,4 +42,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function domicilio(){
+        return $this
+        ->hasOne('App\Models\UserDomicilio','user_id','id');
+    }
 }
